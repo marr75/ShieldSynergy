@@ -11,10 +11,10 @@ static class ShieldSynergyPatch {
     static void Postfix(Facility __instance, TerraformationConfig.HabitabilityParametersNew __result) {
         if (!Plugin.ShieldSynergyEnabled.Value) { return; }
         if (__result == null || __result.radiation <= 0.0) { return; } // null/non-shield/partial-build -> skip
-        long n = __instance.Enabled;
+        var n = __instance.Enabled;
         if (n <= 1) { return; }                                        // single shield stays vanilla
-        double factor = Math.Pow(n, Plugin.ShieldSynergyExponent.Value - 1.0);
-        double cap = Plugin.ShieldSynergyMaxMultiplier.Value;
+        var factor = Math.Pow(n, Plugin.ShieldSynergyExponent.Value - 1.0);
+        var cap = Plugin.ShieldSynergyMaxMultiplier.Value;
         if (cap > 0.0 && factor > cap) { factor = cap; }
         __result.radiation *= factor;
     }
