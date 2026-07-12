@@ -5,7 +5,7 @@
     <AssemblyName>ShieldSynergy</AssemblyName>
     <Product>ShieldSynergy</Product>
     <Version>0.1.0</Version>
-    <BepInExPluginGuid>matt.solarexpanse.shieldsynergy</BepInExPluginGuid>
+    <BepInExPluginGuid>marr75.solarexpanse.shieldsynergy</BepInExPluginGuid>
   </PropertyGroup>
 
   <ItemGroup>
