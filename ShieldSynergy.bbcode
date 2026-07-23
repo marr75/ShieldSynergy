@@ -1,0 +1,44 @@
+[size=6][b]Shield Synergy[/b][/size]
+
+Vanilla radiation shields stack one-for-one, so mitigating a massive source is basically infeasible: terraforming Io needs roughly 1425-1660 shields, around 480 MT of metal or alloy. Shield Synergy gives a modest boost against small radiation problems, but its main purpose is letting shields synergize so late-game terraforms of huge radiation sources become achievable, without exploits like starting a build on Earth then canceling it over and over.
+
+[img]https://github.com/marr75/ShieldSynergy/raw/main/docs/images/shieldsynergy-hero.png[/img]
+
+[size=5][b]What it does[/b][/size]
+
+[list]
+[*]Building multiple radiation shields at the same site now rewards you for stacking: the more you have, the bigger the bonus each additional one adds, instead of every shield contributing the same flat amount.[/*]
+[*]A single shield behaves exactly like vanilla. The synergy bonus only kicks in once you're stacking two or more.[/*]
+[*]Tunable curve: you decide how much extra reward stacking gives, from a small nudge to a steep payoff.[/*]
+[*]Optional safety cap so a huge shield cluster can't become absurdly overpowered.[/*]
+[*]One toggle to turn it off entirely and get byte-identical vanilla behavior.[/*]
+[/list]
+
+[size=5][b]Before / after[/b][/size]
+
+Vanilla: 4 shields protect exactly 4x as much as 1 shield, no more, no less. With Shield Synergy (default settings), those same 4 shields protect noticeably more than 4x a single shield, because each additional shield compounds the effect instead of just adding to it.
+
+Think of it like a power curve instead of a straight line: with a straight line, shield #10 helps exactly as much as shield #2. With a power curve, shield #10 helps [i]more[/i] than shield #2 did: stacking pays off increasingly, not just proportionally.
+
+[img]https://github.com/marr75/ShieldSynergy/raw/main/docs/images/shieldsynergy-stacking-curve.png[/img]
+
+[size=5][b]Configuration[/b][/size]
+
+Edit [font=Consolas]BepInEx/config/marr75.solarexpanse.shieldsynergy.cfg[/font], or use the in-game Configuration Manager if you have it installed. All settings apply live. No restart needed.
+
+[list]
+[*][b][font=Consolas]ShieldSynergyEnabled[/font][/b]: master on/off switch. Off = vanilla flat-sum shielding.[/*]
+[*][b][font=Consolas]ShieldSynergyExponent[/font][/b] (default [font=Consolas]1.5[/font]): how steep the stacking payoff is. [font=Consolas]1.0[/font] is vanilla (no bonus). Higher numbers make each additional shield worth more. The game's own habitability math tapers off at high radiation reduction, so cranking this very high mostly buys diminishing returns past a point. A mild-to-moderate value is usually the sweet spot.[/*]
+[*][b][font=Consolas]ShieldSynergyMaxMultiplier[/font][/b] (default [font=Consolas]0.0[/font], meaning uncapped): an optional ceiling on how far the stacking bonus can multiply your shielding, in case a very large shield cluster combined with a high exponent gets out of hand for your game.[/*]
+[/list]
+
+[size=5][b]Requirements[/b][/size]
+
+Solar Expanse + BepInEx 5 (Mono/x64)
+
+[size=5][b]Install[/b][/size]
+
+[list=1]
+[*]Install BepInEx 5[/*]
+[*]Drop the [font=Consolas]ShieldSynergy[/font] folder into [font=Consolas]BepInEx/plugins/[/font][/*]
+[/list]

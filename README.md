@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="banner.png" alt="Shield Synergy banner">
+</p>
+
 # Shield Synergy
 
 Vanilla radiation shields stack one-for-one, so mitigating a massive source is basically infeasible: terraforming Io needs roughly 1425-1660 shields, around 480 MT of metal or alloy. Shield Synergy gives a modest boost against small radiation problems, but its main purpose is letting shields synergize so late-game terraforms of huge radiation sources become achievable, without exploits like starting a build on Earth then canceling it over and over.

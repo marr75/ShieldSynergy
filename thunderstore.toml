@@ -1,0 +1,29 @@
+[config]
+schemaVersion = "0.0.1"
+
+[package]
+namespace = "marr75"
+name = "ShieldSynergy"
+versionNumber = "0.0.0"
+description = "Lets radiation shields synergize so late-game terraforms of huge radiation sources become achievable, with a modest boost against small sources too."
+websiteUrl = "https://github.com/marr75/ShieldSynergy"
+containsNsfwContent = false
+
+[package.dependencies]
+BepInEx-BepInExPack = "5.4.2100" # TODO(verify): confirm exact Thunderstore dependency string + version
+
+[build]
+icon = "./icon.png"
+readme = "./README.md"
+outdir = "./artifacts/thunderstore"
+
+[[build.copy]]
+source = "./staging/BepInEx/plugins/ShieldSynergy/"
+target = "./BepInEx/plugins/ShieldSynergy/"
+
+[publish]
+repository = "https://thunderstore.io"
+communities = ["solar-expanse"] # TODO(pending ecosystem-schema PR): confirm community slug
+
+[publish.categories]
+solar-expanse = ["mods"]
